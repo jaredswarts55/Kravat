@@ -1,0 +1,37 @@
+﻿FileName: {{Model.Name}}Controller.cs
+FilePath: {{Options.Path}}
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading;
+using System.Threading.Tasks;
+using System.Web.Http;
+
+using {{Model.TypeNamespace}};
+{{#each ServiceNamespaces}}
+using {{this}};
+{{/each}}
+
+namespace {{Options.Namespace}}
+{
+    public partial class {{Model.NamePlural}}Controller : Controller
+    {{{#each Dependencies}}
+        public readonly {{Name}} {{VariableName}};
+        {{/each}}
+
+        public {{Model.NamePlural}}Controller({{#each Dependencies}}
+            {{Name}} {{VariableName}},
+        {{/each}})
+        {{{#each Dependencies}}
+            this._{{VariableName}} = {{VariableName}};
+        {{/each}}}
+
+        {{#each Endpoints}}
+        [Route("{{Url}}"), Http{{Method}}]
+        public {{Workflow.OutputType.Name}} {{Workflow.Name}}({{Workflow.InputType.Name}} request)
+        { {{#each Workflow.ServiceMethods}}
+            return _{{ParentService.VariableName}}.{{Name}}(request);
+        {{/each}}}
+        {{/each}}
+    }
+}
