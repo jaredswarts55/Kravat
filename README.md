@@ -12,10 +12,14 @@ The biggest driver behind this project is that I feel that workflow programming 
 
 The configuration file contains the configured models, the Endpoints (description of a url and what it does), the Workflows (a list of service methods to execute in order), and the Services (Configured Services/Methods that the Workflows use). [Here is an example](docs/kravatFormat.json).
 
-# Goals
+# Feature Goals
 
 -   [x] Allow the generation of the models json using a DLL containing an Entity Framework Context class.
 -   [ ] Produce Controllers based on the configured models, services, and workflows. (Partially Complete, only allows one service in a workflow atm)
 -   [ ] Create a visual editor to edit the Models, Endpoints, Services, and Workflows.
 -   [ ] Create a command line tool that takes in a configuration file and a template file and produces a rendered file.
 -   [ ] Create template files for javascript/typescript models and services.
+
+# Notes
+
+Currently the code is in a very 'proof of concept' state.
