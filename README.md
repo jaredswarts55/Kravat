@@ -1,6 +1,6 @@
 # Kravat
 
-Data workflow programming in .net.
+Data workflow scaffolding/programming in .net.
 
 # Motivation
 
