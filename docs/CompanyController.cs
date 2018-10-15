@@ -25,7 +25,7 @@ namespace Test.Controllers
         }
 
         
-        [Route("/api/Companies"), HttpGET]
+        [Route("/api/Companies"), HttpGet]
         public Company getCompanies(RequestCompany request)
         { 
             return _companiesService.Get(request);
