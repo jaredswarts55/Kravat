@@ -4,7 +4,7 @@ Data workflow programming in .net.
 
 # Motivation
 
-Programming websites/apis is often a repetitive process. Scaffolding and current flow programming (example: https://www.totaljs.com/flow/) offer two drastically different solutions. The goal of this framework is to provide a set of tools to visually scaffold an api. It goes beyond simple scaffolding by offering some of the elements that flow programming does. Stitching together service calls to produce a result in the generated file. As an example, [this configuration file](docs/kravatFormat.json) will produce two controllers. The UsersController and a [CompaniesController](docs/CompanyController.cs) whith one configured endpoint.
+Programming websites/apis is often a repetitive process. Scaffolding and current flow programming (example: https://www.totaljs.com/flow/) offer two drastically different solutions. The goal of this framework is to provide a set of tools to visually scaffold an api. It goes beyond simple scaffolding by offering some of the elements that flow programming does. Stitching together service calls to produce a result in the generated file. As an example, [this configuration file](docs/kravatFormat.json) will produce two controllers. The UsersController and a [CompaniesController](docs/CompanyController.cs) with one configured endpoint.
 
 # Configuration Format
 
